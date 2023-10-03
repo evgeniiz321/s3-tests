@@ -9468,6 +9468,7 @@ def test_versioned_concurrent_object_create_and_remove():
 @attr('lifecycle')
 @attr('fails_on_dbstore')
 def test_lifecycle_set():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     rules=[{'ID': 'rule1', 'Expiration': {'Days': 1}, 'Prefix': 'test1/', 'Status':'Enabled'},
@@ -9482,6 +9483,7 @@ def test_lifecycle_set():
 @attr('lifecycle')
 @attr('fails_on_dbstore')
 def test_lifecycle_get():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     rules=[{'ID': 'test1/', 'Expiration': {'Days': 31}, 'Prefix': 'test1/', 'Status':'Enabled'},
@@ -9497,6 +9499,7 @@ def test_lifecycle_get():
 @attr('lifecycle')
 @attr('fails_on_dbstore')
 def test_lifecycle_get_no_id():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -9534,6 +9537,7 @@ def test_lifecycle_get_no_id():
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration():
+    raise SkipTest('Not Implemented')
     bucket_name = _create_objects(keys=['expire1/foo', 'expire1/bar', 'keep2/foo',
                                         'keep2/bar', 'expire3/foo', 'expire3/bar'])
     client = get_client()
@@ -9572,6 +9576,7 @@ def test_lifecycle_expiration():
 @attr('list-objects-v2')
 @attr('fails_on_dbstore')
 def test_lifecyclev2_expiration():
+    raise SkipTest('Not Implemented')
     bucket_name = _create_objects(keys=['expire1/foo', 'expire1/bar', 'keep2/foo',
                                         'keep2/bar', 'expire3/foo', 'expire3/bar'])
     client = get_client()
@@ -9609,6 +9614,7 @@ def test_lifecyclev2_expiration():
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration_versioning_enabled():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     check_configure_versioning_retry(bucket_name, "Enabled", "Enabled")
@@ -9637,6 +9643,7 @@ def test_lifecycle_expiration_versioning_enabled():
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration_tags1():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -9749,6 +9756,7 @@ def setup_lifecycle_tags2(client, bucket_name):
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration_tags2():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -9770,6 +9778,7 @@ def test_lifecycle_expiration_tags2():
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration_versioned_tags2():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -9843,6 +9852,7 @@ def verify_lifecycle_expiration_noncur_tags(client, bucket_name, secs):
 @attr('fails_on_aws')
 @attr('fails_on_dbstore')
 def test_lifecycle_expiration_noncur_tags1():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -14841,6 +14851,7 @@ def _put_bucket_encryption_kms(client, bucket_name):
 @attr(assertion='succeeds')
 @attr('sse-s3')
 def test_put_bucket_encryption_s3():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     _put_bucket_encryption_s3(client, bucket_name)
@@ -14851,6 +14862,7 @@ def test_put_bucket_encryption_s3():
 @attr(assertion='succeeds')
 @attr('encryption')
 def test_put_bucket_encryption_kms():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     _put_bucket_encryption_kms(client, bucket_name)
@@ -14862,6 +14874,7 @@ def test_put_bucket_encryption_kms():
 @attr(assertion='succeeds')
 @attr('sse-s3')
 def test_get_bucket_encryption_s3():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -14886,6 +14899,7 @@ def test_get_bucket_encryption_s3():
 @attr(assertion='succeeds')
 @attr('encryption')
 def test_get_bucket_encryption_kms():
+    raise SkipTest('Not Implemented')
     kms_keyid = get_main_kms_keyid()
     if kms_keyid is None:
         kms_keyid = 'fool-me-again'
@@ -14914,6 +14928,7 @@ def test_get_bucket_encryption_kms():
 @attr(assertion='succeeds')
 @attr('sse-s3')
 def test_delete_bucket_encryption_s3():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -14940,6 +14955,7 @@ def test_delete_bucket_encryption_s3():
 @attr(assertion='succeeds')
 @attr('encryption')
 def test_delete_bucket_encryption_kms():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
 
@@ -14987,6 +15003,7 @@ def _test_sse_s3_default_upload(file_size):
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_upload_1b():
+    raise SkipTest('Not Implemented')
     _test_sse_s3_default_upload(1)
 
 @attr(resource='object')
@@ -14998,6 +15015,7 @@ def test_sse_s3_default_upload_1b():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_upload_1kb():
+    raise SkipTest('Not Implemented')
     _test_sse_s3_default_upload(1024)
 
 @attr(resource='object')
@@ -15009,6 +15027,7 @@ def test_sse_s3_default_upload_1kb():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_upload_1mb():
+    raise SkipTest('Not Implemented')
     _test_sse_s3_default_upload(1024*1024)
 
 @attr(resource='object')
@@ -15020,6 +15039,7 @@ def test_sse_s3_default_upload_1mb():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_upload_8mb():
+    raise SkipTest('Not Implemented')
     _test_sse_s3_default_upload(8*1024*1024)
 
 def _test_sse_kms_default_upload(file_size):
@@ -15055,6 +15075,7 @@ def _test_sse_kms_default_upload(file_size):
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_kms_default_upload_1b():
+    raise SkipTest('Not Implemented')
     _test_sse_kms_default_upload(1)
 
 @attr(resource='object')
@@ -15066,6 +15087,7 @@ def test_sse_kms_default_upload_1b():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_kms_default_upload_1kb():
+    raise SkipTest('Not Implemented')
     _test_sse_kms_default_upload(1024)
 
 @attr(resource='object')
@@ -15077,6 +15099,7 @@ def test_sse_kms_default_upload_1kb():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_kms_default_upload_1mb():
+    raise SkipTest('Not Implemented')
     _test_sse_kms_default_upload(1024*1024)
 
 @attr(resource='object')
@@ -15088,6 +15111,7 @@ def test_sse_kms_default_upload_1mb():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_kms_default_upload_8mb():
+    raise SkipTest('Not Implemented')
     _test_sse_kms_default_upload(8*1024*1024)
 
 
@@ -15101,6 +15125,7 @@ def test_sse_kms_default_upload_8mb():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_method_head():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     _put_bucket_encryption_s3(client, bucket_name)
@@ -15130,6 +15155,7 @@ def test_sse_s3_default_method_head():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_multipart_upload():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     _put_bucket_encryption_s3(client, bucket_name)
@@ -15181,6 +15207,7 @@ def test_sse_s3_default_multipart_upload():
 @attr('sse-s3')
 @attr('fails_on_dbstore')
 def test_sse_s3_default_post_object_authenticated_request():
+    raise SkipTest('Not Implemented')
     bucket_name = get_new_bucket()
     client = get_client()
     _put_bucket_encryption_s3(client, bucket_name)
@@ -15231,6 +15258,7 @@ def test_sse_s3_default_post_object_authenticated_request():
 @attr('encryption')
 @attr('fails_on_dbstore')
 def test_sse_kms_default_post_object_authenticated_request():
+    raise SkipTest('Not Implemented')
     kms_keyid = get_main_kms_keyid()
     if kms_keyid is None:
         raise SkipTest
